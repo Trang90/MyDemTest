@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mydemoapplication.Main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_catalogFragment"
+            app:destination="@id/catalogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.mydemoapplication.catalog.CatalogFragment"
+        android:label="catalog_fragment"
+        tools:layout="@layout/catalog_fragment" >
+        <argument
+            android:name="catalogID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_catalogFragment_to_detailItemFragment"
+            app:destination="@id/detailItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.mydemoapplication.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.mydemoapplication.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/favorite_fragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.mydemoapplication.cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/cart_fragment" />
+    <fragment
+        android:id="@+id/detailItemFragment"
+        android:name="com.example.mydemoapplication.detail.DetailItemFragment"
+        android:label="Detail_Item_Fragment"
+        tools:layout="@layout/detail_item_fragment" >
+        <argument
+            android:name="detailID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.mydemoapplication.testretrofit.network.testOverview.OverviewFragment"
+        android:label="OverviewFragment"
+        tools:layout="@layout/fragment_overview" >
+        <action
+            android:id="@+id/action_overviewFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.mydemoapplication.testretrofit.network.testDetail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/test_fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="com.example.mydemoapplication.testretrofit.network.MarsProperty" />
+    </fragment>
+    <fragment
+        android:id="@+id/thanhToanDrawerFragment"
+        android:name="com.example.mydemoapplication.ThanhToanDrawerFragment"
+        android:label="fragment_thanh_toan_drawer"
+        tools:layout="@layout/fragment_thanh_toan_drawer" />
+    <fragment
+        android:id="@+id/vanChuyenDrawerFragment"
+        android:name="com.example.mydemoapplication.VanChuyenDrawerFragment"
+        android:label="fragment_van_chuyen_drawer"
+        tools:layout="@layout/fragment_van_chuyen_drawer" />
+    <fragment
+        android:id="@+id/lienHeDrawerFragment"
+        android:name="com.example.mydemoapplication.LienHeDrawerFragment"
+        android:label="fragment_lien_he_drawer"
+        tools:layout="@layout/fragment_lien_he_drawer" />
+</navigation>

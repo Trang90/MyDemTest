@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/thanhToanDrawerFragment"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="@string/hinh_thuc_thanh_toan" />
+    <item
+        android:id="@+id/vanChuyenDrawerFragment"
+        android:icon="@drawable/ic_baseline_local_shipping_24"
+        android:title="@string/giao_hang" />
+    <item
+        android:id="@+id/lienHeDrawerFragment"
+        android:icon="@drawable/ic_baseline_contact_mail_24"
+        android:title="@string/lien_he" />
+</menu>
